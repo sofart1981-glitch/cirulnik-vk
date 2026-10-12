@@ -1,0 +1,64 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Оформление «Цирюльника»</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;800&family=Montserrat:wght@400;500;600&display=swap">
+<style>
+/* Layout: one narrow column, a grid of album covers, then a row of post templates. Single warm burgundy look to match the group. */
+:root {
+  --bg: #3e1b19;
+  --surface: #4d2321;
+  --fg: #f6e9dc;
+  --muted: #d7bfae;
+  --gold: #e9ca7a;
+  --line: #7a4a3f;
+  --display: "Playfair Display", Georgia, "Times New Roman", serif;
+  --body: "Montserrat", "Segoe UI", Arial, sans-serif;
+  color-scheme: dark;
+}
+body { background: var(--bg); color: var(--fg); font-family: var(--body); }
+.wrap { max-width: 1100px; margin: 0 auto; padding-inline: 16px; padding-block: 40px 64px; display: grid; gap: 40px; }
+header { display: grid; gap: 10px; }
+.eyebrow { font-size: 12px; letter-spacing: .28em; text-transform: uppercase; color: var(--gold); }
+h1 { font-family: var(--display); font-weight: 800; font-size: clamp(30px, 5vw, 46px); margin: 0; color: var(--gold); text-wrap: balance; }
+h2 { font-family: var(--display); font-weight: 600; font-size: 24px; margin: 0; color: var(--gold); }
+p { margin: 0; color: var(--muted); line-height: 1.6; max-width: 65ch; }
+section { display: grid; gap: 16px; }
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr)); gap: 16px; }
+.posts { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 240px), 1fr)); gap: 16px; }
+figure { margin: 0; display: grid; gap: 8px; }
+figure img { display: block; width: 100%; height: auto; border: 1px solid var(--line); }
+figcaption { font-size: 13px; color: var(--muted); }
+</style>
+<div class="wrap">
+  <header>
+    <div class="eyebrow">Цирюльник · ВКонтакте</div>
+    <h1>Единое оформление группы</h1>
+    <p>Обложки альбомов и шаблоны картинок для постов в цветах обложки сообщества: бордовый фон, золотые буквы, тонкая рамка.</p>
+  </header>
+  <section>
+    <h2>Обложки альбомов</h2>
+    <div class="grid">
+      <figure><img src="covers/01_karseell.jpg" alt="Обложка альбома Karseell"><figcaption>Karseell</figcaption></figure>
+      <figure><img src="covers/02_akcii_pokupateli.jpg" alt="Обложка альбома Акции для розничных покупателей"><figcaption>Акции для розничных покупателей</figcaption></figure>
+      <figure><img src="covers/03_akcii_salony.jpg" alt="Обложка альбома Акции для салонов"><figcaption>Акции для салонов</figcaption></figure>
+      <figure><img src="covers/04_magaziny.jpg" alt="Обложка альбома Наши магазины"><figcaption>Наши магазины</figcaption></figure>
+      <figure><img src="covers/05_cehko.jpg" alt="Обложка альбома C:EHKO"><figcaption>Продукция C:EHKO</figcaption></figure>
+      <figure><img src="covers/06_ollin.jpg" alt="Обложка альбома Ollin"><figcaption>Продукция Ollin</figcaption></figure>
+      <figure><img src="covers/07_constant_delight.jpg" alt="Обложка альбома Constant Delight"><figcaption>Constant Delight</figcaption></figure>
+      <figure><img src="covers/08_farmavita.jpg" alt="Обложка альбома Farmavita"><figcaption>Продукция Farmavita</figcaption></figure>
+      <figure><img src="covers/09_kondor.jpg" alt="Обложка альбома Kondor"><figcaption>KONDOR</figcaption></figure>
+      <figure><img src="covers/10_concept.jpg" alt="Обложка альбома Concept"><figcaption>Продукция Concept</figcaption></figure>
+      <figure><img src="covers/11_tefia.jpg" alt="Обложка альбома Tefia"><figcaption>Продукция Tefia</figcaption></figure>
+      <figure><img src="covers/12_londa.jpg" alt="Обложка альбома Londa"><figcaption>Продукция Londa</figcaption></figure>
+    </div>
+  </section>
+  <section>
+    <h2>Шаблоны постов</h2>
+    <div class="posts">
+      <figure><img src="covers/post_akciya.jpg" alt="Шаблон поста Акция"><figcaption>Акция</figcaption></figure>
+      <figure><img src="covers/post_tovar_nedeli.jpg" alt="Шаблон поста Товар недели"><figcaption>Товар недели</figcaption></figure>
+      <figure><img src="covers/post_sovet.jpg" alt="Шаблон поста Совет профи"><figcaption>Совет профи</figcaption></figure>
+    </div>
+  </section>
+</div>
+
+</body></html>

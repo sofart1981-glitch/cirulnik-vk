@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<title>Жирные корни — подборка</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700&amp;family=Manrope:wght@400;600;700&amp;display=swap">
+<style>
+body{margin:0}
+a{color:#2F6E5F}a:hover{color:#1E4A40}
+</style>
+</helmet>
+<div style="width: 1080px; height: 1350px; box-sizing: border-box; padding: 64px 64px 56px; background: #F3F1EB; color: #1C2826; font-family: Manrope, sans-serif; display: flex; flex-direction: column; gap: 36px">
+
+<div style="display: flex; justify-content: space-between; align-items: center">
+<div style="display: flex; align-items: center; gap: 16px">
+<img src="/_blob/ac21f7d4ee5c4bfd8cc04e829b954ed4" alt="Цирюльник — магазин профессиональной косметики для волос" style="width: 128px; height: 128px; display: block">
+<div style="display: flex; flex-direction: column; gap: 4px">
+<div style="font-family: Unbounded, sans-serif; font-weight: 700; font-size: 30px; letter-spacing: 0.5px; color: {{accent}}">Цирюльник</div>
+<div style="font-size: 17px; color: #4A5856">магазины профессиональной<br>косметики для волос</div>
+</div>
+</div>
+<div style="font-size: 17px; font-weight: 600; padding: 12px 20px; border: 1.5px solid #1C2826; border-radius: 999px">Подборка недели</div>
+</div>
+
+<div style="display: flex; flex-direction: column; gap: 16px">
+<h1 style="margin: 0; font-family: Unbounded, sans-serif; font-weight: 700; font-size: 66px; line-height: 1.05; letter-spacing: -1px">Жирные корни?<br>Есть решение</h1>
+<p style="margin: 0; font-size: 24px; line-height: 1.4; color: #3B4846; max-width: 820px">Шампуни, пилинги и маски, которые регулируют себум и продлевают свежесть волос — от четырёх брендов, которые есть у нас на полках</p>
+</div>
+
+<div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; flex-grow: 1">
+<sc-for list="{{items}}" as="item" hint-placeholder-count="9">
+<div style="background: #FFFFFF; border-radius: 22px; padding: 16px 18px 16px 14px; display: flex; gap: 14px; align-items: center">
+<div style="width: 112px; height: 168px; flex-shrink: 0; border-radius: 14px; overflow: hidden; background: #FFFFFF; display: flex; align-items: center; justify-content: center">
+<img src="{{item.photo}}" alt="{{item.brand}} {{item.name}}" style="max-width: 112px; max-height: 168px; width: auto; height: auto; display: block">
+</div>
+<div style="display: flex; flex-direction: column; gap: 6px; min-width: 0">
+<div style="font-size: 13px; font-weight: 700; letter-spacing: 1.4px; text-transform: uppercase; color: {{item.brandColor}}">{{item.brand}}</div>
+<div style="font-size: 18px; font-weight: 700; line-height: 1.25">{{item.name}}</div>
+<div style="font-size: 15px; color: #4A5856">{{item.kind}}</div>
+</div>
+</div>
+</sc-for>
+</div>
+
+<div style="display: flex; justify-content: space-between; align-items: center; background: #1C2826; color: #F3F1EB; border-radius: 22px; padding: 26px 32px">
+<div style="font-size: 22px; font-weight: 600; line-height: 1.35">Подберём уход под вашу кожу головы —<br>спрашивайте в магазинах «Цирюльник»</div>
+<div style="font-family: Unbounded, sans-serif; font-size: 18px; font-weight: 500; background: {{accent}}; color: #FFFFFF; padding: 14px 22px; border-radius: 999px">Великий Новгород</div>
+</div>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"accent":{"editor":"color","default":"#8A2120","options":["#8A2120","#B83A5E","#2F6E5F"]},"$preview":{"width":1080,"height":1350}}'>
+class Component extends DCLogic {
+  renderVals() {
+    const accent = this.props.accent ?? '#8A2120';
+    const b = { concept: '#2F6E5F', farma: '#6B4E9B', ollin: '#2C6A93', cd: '#9A5B2E' };
+    return {
+      accent,
+      items: [
+        { brand: 'Concept', brandColor: b.concept, photo: '/_blob/48c7f2ff53d41707bec5743faa722f89', name: 'Sebo Control', kind: 'Шампунь с кислотами и цинком' },
+        { brand: 'Concept', brandColor: b.concept, photo: '/_blob/622362d9369ac833feba81e56cefbbe2', name: 'Deep Cleansing Peeling', kind: 'Пилинг для кожи головы' },
+        { brand: 'FarmaVita', brandColor: b.farma, photo: '/_blob/712daf8ea524f1f703e8a64596a3f79b', name: 'Amethyste Regulate', kind: 'Шампунь Sebo Control' },
+        { brand: 'FarmaVita', brandColor: b.farma, photo: '/_blob/2b9e7e9d7ecc8cbb4185662598df2f4a', name: 'Amethyste Divalent', kind: 'Шампунь: жирные корни, сухие кончики' },
+        { brand: 'Ollin', brandColor: b.ollin, photo: '/_blob/f4fdb48fc270aaefde63754df10c212b', name: 'Full Force с бамбуком', kind: 'Пилинг для кожи головы' },
+        { brand: 'Ollin', brandColor: b.ollin, photo: '/_blob/0c7ec78404620b6bb64382c1bdc6941d', name: 'Full Force с алоэ', kind: 'Мусс-пилинг' },
+        { brand: 'Ollin', brandColor: b.ollin, photo: '/_blob/81ebf408b21eb7143218dd868ec4ba7d', name: 'Perfect Hair', kind: 'Сухой шампунь' },
+        { brand: 'Constant Delight', brandColor: b.cd, photo: '/_blob/ab17d0e48c2ced2f356fdd9b4176e7c8', name: 'Bio Flowers Water Man', kind: 'Шампунь бивалентный, регулирует себум' },
+        { brand: 'Constant Delight', brandColor: b.cd, photo: '/_blob/a293be8476a737335689cf1b309a45f3', name: 'Bio Flowers Water', kind: 'Маска очищающая и нормализующая' }
+      ]
+    };
+  }
+}
+</script>
+</body>
+</html>
